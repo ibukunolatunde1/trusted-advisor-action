@@ -13,4 +13,4 @@ jobs:
         with:
           email: ibukunolatunde1@gmail.com
           profile: production
-          region: us-east-1
+          region: us-east-2
