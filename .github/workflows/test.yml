@@ -10,3 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: ./
+        with:
+          email: ibukunolatunde1@gmail.com
+          profile: production
+          region: us-east-1
