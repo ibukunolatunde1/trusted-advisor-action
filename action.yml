@@ -1,0 +1,19 @@
+name: 'Trusted Advisor'
+description: 'Security Status from Trusted Advisor'
+author: 'Ibukunoluwa Olatunde'
+inputs:
+  email:
+    description: 'Recepient of the email'
+    required: true
+  profile:
+    description: 'User Profile'
+    required: true
+  region:
+    description: 'Region'
+    required: true
+outputs:
+  time:
+    description:
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
