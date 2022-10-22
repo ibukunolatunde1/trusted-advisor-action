@@ -5,8 +5,8 @@ import { Support, STS } from 'aws-sdk'
 const main = async () => {
     try {
         const email = core.getInput('email', { required: true });
-        const profile = core.getInput('email', { required: true });
-        const region = core.getInput('email', { required: true });
+        const profile = core.getInput('profile', { required: true });
+        const region = core.getInput('region', { required: true });
         console.log(`Hello ${email} this is your ${profile}`);
         const time = (new Date()).toTimeString();
         core.setOutput("time", time);
