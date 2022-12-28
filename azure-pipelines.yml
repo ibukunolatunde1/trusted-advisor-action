@@ -16,6 +16,8 @@ steps:
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
+    echo $(Environment.Name)
+    echo $(Build.DefinitionName)
     echo $(Build.Repository.Name)
     echo $(Build.RequestedFor)
     echo $(Build.RequestedForEmail)
