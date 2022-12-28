@@ -22,4 +22,6 @@ steps:
     echo $(Build.SourceBranch)
     echo $(Build.SourceBranchName)
     echo $(Build.BuildId)
+    echo $(Build.BuildNumber)
+    echo $(date +'%d/%m/%Y')
   displayName: 'Run a multi-line script'
