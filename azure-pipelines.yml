@@ -17,4 +17,9 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
     echo $(Build.Repository.Name)
+    echo $(Build.RequestedFor)
+    echo $(Build.RequestedForEmail)
+    echo $(Build.SourceBranch)
+    echo $(Build.SourceBranchName)
+    echo $(Build.BuildId)
   displayName: 'Run a multi-line script'
