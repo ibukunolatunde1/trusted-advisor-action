@@ -26,4 +26,12 @@ steps:
     echo $(Build.BuildId)
     echo $(Build.BuildNumber)
     echo $(date +'%d/%m/%Y')
+    JSON_STRING="{
+      \"Environment\":\"$(Build.BuildId)\",
+      \"Service\":\"$(Build.DefinitionName)\",
+      \"Version\":\"$(Build.BuildNumber)\",
+      \"DeployDate\":\"$(date +'%d/%m/%Y')\",
+      \"Publisher\":\"$(Build.RequestedFor)\"
+    }"
+    echo "${JSON_STRING}"
   displayName: 'Run a multi-line script'
