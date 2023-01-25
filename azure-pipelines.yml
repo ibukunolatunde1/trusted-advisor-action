@@ -23,7 +23,7 @@ steps:
       \"DeployDate\":\"$(date +'%d/%m/%Y')\",
       \"Publisher\":\"$(Build.RequestedFor)\"
     }"
-    NEW_JSON=$(jq --arg id 20 '. += {"Id": $id}' <<< $JSON_STRING)
+    NEW_JSON=$(jq --arg id "427fedaf5e16447b92c533d0ec155894" '. += {"Id": $id}' <<< $JSON_STRING)
     echo $NEW_JSON
     echo "${NEW_JSON}" > myownfile.json
     echo $JSON_STRING | jq .
