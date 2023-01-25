@@ -25,8 +25,8 @@ steps:
     }"
     NEW_JSON=$(jq --arg id 20 '. += {"Id": $id}' <<< $JSON_STRING)
     echo $NEW_JSON
-    echo "${JSON_STRING}" > myownfile.json
+    echo "${NEW_JSON}" > myownfile.json
     echo $JSON_STRING | jq .
     # curl -v -d '{"Environment":"'"$(Build.BuildId)"'","Service":"'"$(Build.DefinitionName)"'","Version":"'"$(Build.BuildNumber)"'","DeployDate":"'"$(date +'%d/%m/%Y')"'","Publisher":"'"$(Build.RequestedFor)"'"}' -H "Content-Type: application/json" -X POST "https://prod-234.westeurope.logic.azure.com:443/workflows/ba37919e5e0440ccb5df81631d6b8663/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=6T6hb9EZuODtmd-GP9y9BFt3jDg5PIZ8PIuH26Qe43M"
-    curl -v -d "@myownfile.json" -H "Content-Type: application/json" -X POST "https://prod-234.westeurope.logic.azure.com:443/workflows/ba37919e5e0440ccb5df81631d6b8663/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=6T6hb9EZuODtmd-GP9y9BFt3jDg5PIZ8PIuH26Qe43M"
+    curl -v -d "@myownfile.json" -H "Content-Type: application/json" -X POST "https://prod-70.westeurope.logic.azure.com:443/workflows/ecce67397d494c08bdb7be45ab41a627/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=h1iG7Ea6DR6mJ8yyljRZBKyUHNQArGxJM6Oxxuj86uM"
   displayName: 'Run a multi-line script'
